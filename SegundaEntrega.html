@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Estilização geral do corpo da página */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4; /* Cor de fundo */
+            }
+
+            /* Container principal dos itens flexíveis */
+            .container {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 105px auto;
+                row-gap: 8px;
+
+                width: 100%; /* Define a largura do container como 100% da tela */
+                max-width: 1000px; /* Limita o container a 1000px de largura */
+                background: white; /* Fundo branco */
+                padding: 20px; /* Espaçamento interno */
+                border-radius: 10px; /* Cantos arredondados */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito visual */
+                margin-inline: auto;
+                height: 100vh; /* Faz com que o body ocupe 100% da altura da tela */
+            }
+
+            /* Estilização dos itens dentro do container */
+            .header {
+                background: rgb(111, 248, 116); /* Cor de fundo */
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            /* Estilização dos itens dentro do container */
+            .mensagens {
+                background: rgb(245, 100, 199); /* Cor de fundo */
+            }
+
+            /* Estilização dos itens dentro do container */
+            .aulas {
+                background: rgb(186, 206, 84); /* Cor de fundo */
+            }
+
+            /* Estilização dos itens dentro do container */
+            .noticias {
+                background: rgb(247, 207, 126); /* Cor de fundo */
+            }
+
+            .item {
+                display: flex; /* Ativa Flexbox dentro de cada item */
+                flex-direction: column;
+                align-items: flex-start; /* Centraliza o conteúdo verticalmente */
+                justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+                color: #333; /* Cor do texto */
+                font-size: 1.2rem; /* Tamanho do texto */
+                font-weight: bold; /* Texto em negrito */
+                padding: 16px;
+                overflow-y: auto;
+            }
+
+            /* Estilos responsivos para telas menores que 768px */
+            @media (max-width: 768px) {
+                .main {
+                    grid-template-columns: 1fr; /* Muda o layout para coluna em telas menores */
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="item header">Header</header>
+            <main class="main">
+                <div class="item mensagens">Mensagens
+                    <h1>Olá, Júlia!</h1>
+                    <p>Você possui um armário reservado com entrega para hoje.</p>
+                    <p>Você possui uma pendência no financeiro.</p>
+                </div>            
+                <div class="item aulas">Aulas
+                    <p>Disciplina</p>
+                    <p>Sala e Horário</p>
+                </div>
+                <div class="item noticias">Notícias
+                    <p>Card de notícias</p>
+                    <p>Subtítulo</p>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
