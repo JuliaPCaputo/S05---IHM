@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --cor-click: #126ae2; /* Click */
+                --cor-sombra: #0a599b; /* Azul Escuro */
+                --cor-text: black; /* Preto */
+                --cor-back1: #edf2f4; /* Azul claro */
+                
+                --md-sys-color-primary: #126ae2;
+                --md-sys-color-on-primary: #FFFFFF;
+                --md-sys-color-primary-container: #edf2f4;
+                --md-sys-color-on-primary-container: #002020;
+            }
+
+            @import url(https://fonts.googleapis.com/css?family=Arimo);
+            
+            /* Estilização geral do corpo da página */
+            body {
+                font-family: "Arimo", sans-serif;
+                margin: 0px;
+                background-color: var(--cor-back1);
+
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+            }
+
+            /* Container principal dos itens flexíveis */
+            .container {
+                width: 100%; /* Define a largura do container como 100% da tela */
+                max-width: 1000px; /* Limita o container a 1000px de largura */
+                padding: 20px; /* Espaçamento interno */
+                margin-inline: auto;
+                height: 100vh; /* Faz com que o body ocupe 100% da altura da tela */
+            }
+
+            /* Estilização dos itens dentro do container */
+            #head {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                height: 70px;
+                padding-inline: 16px;
+            }
+
+            .main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            /* Estilização dos itens dentro do container */
+            .mensagens {
+                position: relative;
+                background-color: white;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                padding: 15px;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Estilização dos itens dentro do container */
+            .aulas {
+                position: relative;
+                background-color: white;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                padding: 15px;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Estilização dos itens dentro do container */
+            .noticias {
+                position: relative;
+                background-color: white;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                padding: 15px;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .item {
+                display: flex; /* Ativa Flexbox dentro de cada item */
+                flex-direction: column;
+                align-items: flex-start; /* Centraliza o conteúdo verticalmente */
+                justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+                color: #333; /* Cor do texto */
+                font-size: 1.2rem; /* Tamanho do texto */
+                font-weight: bold; /* Texto em negrito */
+                padding: 16px;
+                overflow-y: auto;
+            }
+
+            #logo {
+                width: 80px;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-image: url(./logo.svg);
+            }
+
+            #logo svg path{
+                fill: var(--cor-click);
+            }
+
+            #user_name {
+                display: block;
+                font-size: 17pt;
+            }
+
+            #mns_box {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                margin-top:5px;
+            }
+
+            #icon {
+                width: 18px;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 5px;
+            }
+
+            #mns {
+                padding: 5px;
+                width: 80%;
+                display: inline-block;
+            }
+
+            .material-symbols-outlined {
+                color: var(--cor-click);
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+            }
+
+            #disciplina {
+                display: block;
+                font-size: 10pt;
+            }
+
+            #noticia {
+                display: block;
+                font-size: 10pt;
+            }
+
+            .icoG {
+                font-size: 30px;
+            }
+
+            .icoP {
+                font-size: 18px;
+                vertical-align: middle; /* propriedade para deixar o icone centralizado na linha */
+            }
+
+            .font {
+                font-family: "Arimo", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: 11px;
+                color: var(--cor-text)
+            }
+
+            #menu_aba {
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: rgb(0, 0, 0);
+                overflow-x: hidden;
+                transition: 0.5s;
+                z-index: 1;
+                display: none;
+                border-radius: 10px;
+            }
+
+            #menu_bot {
+                position: relative;
+                padding: 20px;
+                display: "block";
+                cursor: pointer;
+                font-family: "Arimo", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: 14pt;
+                color: #126ae2;
+                transition: 0.5s;
+            }
+
+            #componentes {
+                position: relative;
+                background-color: white;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                padding: 15px;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }    
+
+            /* Estilos responsivos para telas menores que 768px */
+            @media (max-width: 768px) {
+                .main {
+                    grid-template-columns: 1fr; /* Muda o layout para coluna em telas menores */
+                }
+            }
+
+            .carousel-container {
+                position: relative;
+                overflow: hidden;
+                background-color: white;
+                border-radius: 10px;
+                margin: 20px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+            
+            }
+
+            .carousel {
+                display: realtive; /* mudaremos para flex posteriormente */
+            }
+
+            .card {
+                min-width: 100%;
+                text-align: center;
+            }
+
+            .card img {
+                width: 100%;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+
+            .info {
+                padding: 10px
+            }
+
+            .icon {
+                font-size: 15px;
+                margin-left: 5px;
+                margin-right: 2px;
+                width: 18px;
+                display: inline-block;
+                vertical-align: middle
+            }
+
+            button {
+                position: absolute;
+                top: 30%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 10px;
+            }
+
+            #prevBtn { left: 10px; }
+            #nextBtn { right: 10px; }
+        </style>
+    </head>
+
+    <body>
+        <div id="menu_aba">
+            <div id="menu_bot" onclick="closeMenu(), temaInatel()">Tema Inatel</div>
+            <div id="menu_bot" onclick="closeMenu(), temaDark()">Tema Dark</div>
+        </div> 
+
+        <header id="head">   
+            <div id="menu" onclick="openMenu()"><span class="material-symbols-outlined icoG">menu</span></div>
+            <div id="logo"></div>
+            <div id="perfil"><span class="material-symbols-outlined icoG">Person</span></div>
+        </header>
+
+        <div class="container">
+            <main class="main">
+                <div id="mensagens">
+                    <div id="user_name" class="font">Olá, Júlia!</div>
+                    <div id="mns_box"></div>
+                    <div id="icon"><span class="material-symbols-outlined icoP">notifications_active</span></div>
+                    <div id="mns" class="font">Você possui um armário reservado com entrega para hoje.</div>
+                </div>
+                
+                <div id="mns_box">
+                    <div id="icon"><span class="material-symbols-outlined icoP">mail</span></div>
+                    <div id="mns" class="font">Você possui uma pendência no financeiro.</div>
+                </div>
+
+                <div class="carousel-container">
+                    <div id="carousel" class="carousel"></div>
+                    <button id="prevBtn">❮</button>
+                    <button id="nextBtn">❯</button>
+                </div>
+            </main>
+        </div>
+        
+        <script>
+            const eventos = [
+                {
+                    id: 1,
+                    title: 'Semana do Software 2025',
+                    date: '12/05',
+                    time: '10:00',
+                    location: 'Salão de Eventos',
+                    type: 'tech',
+                    description: 'Uma semana inteira dedicada à tecnologia e inovação, com palestras, workshops e hackathons.',
+                    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800&h=400'
+                },
+                {
+                    id: 2,
+                    title: 'Workshop de IoT',
+                    date: '12/01',
+                    time: '08:00',
+                    location: 'Laboratório CS&I',
+                    type: 'tech',
+                    description: 'Workshop prático sobre Internet das Coisas e suas aplicações na indústria 4.0.',
+                    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800&h=400'
+                },
+                {
+                    id: 3,
+                    title: 'Festa dos Alunos 2025',
+                    date: '18/05',
+                    time: '19:00',
+                    location: 'Área Esportiva do Inatel',
+                    type: 'cultural',
+                    description: 'Venha comemorar a melhor Festa dos Alunos de todos os tempos!',
+                    image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=800&h=400'
+                },
+                {
+                    id: 4,
+                    title: 'Feira de Oportunidades',
+                    date: '04/05',
+                    time: '10:00',
+                    location: 'Salão de Eventos',
+                    type: 'academic',
+                    description: 'Venha conhecer empresas e projetos com destaque na área da engenharia.',
+                    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800&h=400'
+                }
+            ];
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const tema = localStorage.getItem("tema");
+
+                if(!tema){
+                    temaInatel();
+                } else{
+                    switch(tema){
+                        case "Dark": 
+                            temaDark();
+                            break;
+
+                        default: 
+                            temaInatel();
+                            break;
+                    }
+                }
+
+                eventos.forEach((evento) => {
+                    const card = `
+                        <div class="card">
+                            <img src="${evento.image}" alt="${evento.title}">
+                            <div class="info">
+                                <h3>${evento.title}</h3>
+                                <p>${evento.description}</p>
+                                <p><span class="material-symbols-outlined icon">event</span> ${evento.date} às ${evento.time} <span class="material-symbols-outlined icon">pin_drop</span> ${evento.location}</p>
+                            </div>
+                        </div>
+                    `
+
+                    const carousel = document.getElementById("carousel");
+                    carousel.innerHTML += card;
+                })
+            })
+
+            function openMenu() {
+            document.getElementById("menu_aba").style.display = "block"; 
+            }
+        
+            function closeMenu() {
+            document.getElementById("menu_aba").style.display = "none";    
+            }
+
+            function salvarLocalStorage(tema) {
+                localStorage.setItem("tema", tema);
+            }
+        
+            function temaInatel() {
+                document.documentElement.style.setProperty('--cor-click', '#126ae2');
+                document.documentElement.style.setProperty('--cor-sombra', '#0a599b');
+                document.documentElement.style.setProperty('--cor-text', 'black');
+                document.documentElement.style.setProperty('--cor-back1', '#edf2f4');
+                document.documentElement.style.setProperty('--cor-back2', '#6a937a');
+                document.documentElement.style.setProperty('--md-sys-color-primary', '#126ae2');
+
+                salvarLocalStorage("Inatel");
+            }
+        
+            function temaDark() {
+                const cores = {
+                    '--cor-click': '#ffffff',
+                    '--cor-sombra': '#ffffff',
+                    '--cor-text': '#ffffff',
+                    '--cor-back1': '#000000',
+                    '--cor-back2': '#000000',
+                    '--md-sys-color-primary': '#000000'
+                };
+        
+                for (const [variavel, valor] of Object.entries(cores)) {
+                    document.documentElement.style.setProperty(variavel, valor);
+                }
+
+                salvarLocalStorage("Dark");
+            }
+        </script>
+    </body>
+</html>
