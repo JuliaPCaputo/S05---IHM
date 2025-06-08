@@ -21,28 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="card-header">
                     <img src="${vaga.logo}" alt="Logo da empresa" class="card-header-img">
                 </div>
-                <div class="card-body">
-                    <div class="card-body-row">
-                        <span>Empresa:</span>
-                        <span>${vaga.empresa}</span>
+                <div class=".card-body-row-description">
+                    <div class="card-body-description">
+                        <strong>Empresa:</strong> ${vaga.empresa}
                     </div>
-                    <div class="card-body-row">
-                        <span>Cargo:</span>
-                        <span>${vaga.cargo}</span>
+                    <div class=".card-body-row-description">
+                        <strong>Cargo:</strong> ${vaga.cargo}
                     </div>
-                    <div class="card-body-row">
-                        <span>Descrição:</span>
-                        <span>${vaga.descricao}</span>
+                    <div class=".card-body-row-description">
+                        <strong>Descrição:</strong> ${vaga.descricao}
                     </div>
-                    <div class="card-body-row">
-                        <span>Carga Horária:</span>
-                        <span>${vaga.cargaHoraria}</span>
+                    <div class=".card-body-row-description">
+                        <strong>Carga Horária:</strong> ${vaga.cargaHoraria}
                     </div>
-                    <div class="card-body-row">
-                        <span>Período de graduação solicitado:</span>
-                        <span>${vaga.periodoGraduacao}</span>
+                    <div class=".card-body-row-description">
+                        <strong>Período de graduação solicitado:</strong> ${vaga.periodoGraduacao}
                     </div>
-                    </div>
+                </div>
             `
 
             vagaCard.innerHTML = cardHeader
