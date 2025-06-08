@@ -6,7 +6,7 @@
       "horario": "10:00",
       "local": "P1-S17",
       "prova_alert": false,
-      "prova": "12/05",
+      "prova": "12/06",
       "frequencia": "10/25",
       "nota": "9"
     },
@@ -17,7 +17,7 @@
       "horario": "10:00",
       "local": "P1-S17",
       "prova_alert": true,
-      "prova": "12/05",
+      "prova": "16/06",
       "frequencia": "10/25",
       "nota": "5"
     },
@@ -28,7 +28,7 @@
       "horario": "10:00",
       "local": "P1-S17",
       "prova_alert": true,
-      "prova": "12/05",
+      "prova": "18/06",
       "frequencia": "10/25",
       "nota": "7"
     }

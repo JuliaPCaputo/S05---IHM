@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link rel="stylesheet" href="styles_componente.css" />
+
+        <style>
+            * {
+              box-sizing: border-box;
+              margin: 0;
+              padding: 0;
+            }
+      
+            :root {
+              --cor-click: #126ae2; /* Click */
+              --cor-sombra: #0a599b; /* Azul Escuro */
+              --cor-text: #333;
+              --cor-back1: #edf2f4; /* Azul claro */
+              --cor-back2: #edf2f4; /* Azul claro */
+              --cor-letra_menu: #0a599b;
+              --cor-bot_menu: #0a599b;
+      
+              --md-sys-color-primary: #126ae2;
+              --md-sys-color-on-primary: #ffffff;
+              --md-sys-color-primary-container: #edf2f4;
+              --md-sys-color-on-primary-container: #002020;
+            }
+      
+            @import url(https://fonts.googleapis.com/css?family=Arimo);
+      
+            /* Estilização geral do corpo da página */
+            body {
+              font-family: "Arimo", sans-serif;
+              margin: 0px;
+              background-color: var(--cor-back1);
+              color: var(--cor-text);
+      
+              display: flex;
+              width: 100%;
+              flex-direction: column;
+            }
+      
+            /* Container principal dos itens flexíveis */
+            .container {
+              width: 100%; /* Define a largura do container como 100% da tela */
+              max-width: 1000px; /* Limita o container a 1000px de largura */
+              padding: 20px; /* Espaçamento interno */
+              margin-inline: auto;
+              height: 100vh; /* Faz com que o body ocupe 100% da altura da tela */
+            }
+      
+            /* Estilização dos itens dentro do container */
+            #head {
+              display: flex;
+              width: 100%;
+              justify-content: space-between;
+              align-items: center;
+              height: 70px;
+              padding-inline: 16px;
+            }
+
+            #logo {
+              width: 80px;
+              height: 100%;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-image: url(./logo.svg);
+            }
+
+            #logo svg path {
+              fill: var(--cor-click);
+            }
+
+            .icoG {
+              font-size: 30px;
+            }
+
+            .icoP {
+              font-size: 18px;
+              vertical-align: middle; /* propriedade para deixar o icone centralizado na linha */
+            }
+
+            .font {
+              font-family: "Arimo", sans-serif;
+              font-optical-sizing: auto;
+              font-weight: weight;
+              font-style: normal;
+              font-size: 11px;
+              color: var(--cor-text);
+            }
+
+            #menu_aba {
+              height: 100%;
+              width: 100%;
+              position: fixed;
+              top: 0;
+              left: 0;
+              background-color: var(--cor-back1);
+              color: var(--cor-letra_menu);
+              overflow-x: hidden;
+              transition: 0.5s;
+              z-index: 1;
+              display: none;
+              border-radius: 10px;
+            }
+
+            .menu_bot {
+              position: relative;
+              padding: 10px;
+              display: "block";
+              cursor: pointer;
+              font-family: "Arimo", sans-serif;
+              font-optical-sizing: auto;
+              font-weight: weight;
+              font-style: normal;
+              font-size: 14pt;
+              color: var(--cor-bot_menu);
+              transition: 0.5s;
+            }
+
+            @media (max-width: 768px) {
+              .main {
+                grid-template-columns: 1fr; /* Muda o layout para coluna em telas menores */
+              }
+
+              .mensagens-container {
+                grid-column: span 1;
+              }
+
+              .carousel-container {
+                margin-block: 20px;
+              }
+            }
+
+            .icon {
+              font-size: 15px;
+              margin-left: 5px;
+              margin-right: 2px;
+              width: 18px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            main#vagas-container {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 16px;
+              margin-inline: auto;
+              max-width: 60vw;
+              width: 100%;
+            }
+
+            .vaga-container {
+              width: 230px;
+              min-height: 250px;
+              background-color: white;
+              border-radius: 12px;
+              box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+            }
+
+            .card-header {
+              height: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              border-bottom: 1px solid rgb(204, 204, 204);
+            }
+
+            .card-header-img {
+              object-fit: cover;
+              max-height: 44px;
+            }
+
+            .card-body {
+              width: 100%;
+              height: 100%;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+            }
+
+            .card-body-row {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 6px;
+            }
+
+            .vaga-link {
+              text-decoration: none;
+              color: var(--cor-text)
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="menu_aba">
+            <div class="menu_bot" onclick="closeMenu(), temaInatel()">Tema Inatel</div>
+            <div class="menu_bot" onclick="closeMenu(), temaDark()">Tema Dark</div>
+            <div class="menu_bot" onclick="closeMenu(), window.location.href='Vagas.html'">Vagas de Estágio</div>
+        </div>
+      
+        <header id="head">
+            <div id="menu" onclick="openMenu()">
+              <span class="material-symbols-outlined icoG">menu</span>
+            </div>
+            <div id="logo"></div>
+            <div id="perfil">
+              <span class="material-symbols-outlined icoG">Person</span>
+            </div>
+        </header>
+        
+        <main id="vagas-container">
+        </main>
+
+        <script src="script_componente.js"></script>
+        <script src="script_vagas.js"></script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const tema = localStorage.getItem("tema");
+      
+            if (!tema) {
+                temaInatel();
+            } else {
+                switch (tema) {
+                  case "Dark":
+                    temaDark();
+                    break;
+      
+                  default:
+                    temaInatel();
+                    break;
+                }
+            }
+          })
+          
+          const script = document.createElement("script");
+          script.src = "script_componente.js";
+          document.body.appendChild(script);
+    
+          function openMenu() {
+            document.getElementById("menu_aba").style.display = "block";
+          }
+    
+          function closeMenu() {
+            document.getElementById("menu_aba").style.display = "none";
+          }
+    
+          function salvarLocalStorage(tema) {
+            localStorage.setItem("tema", tema);
+          }
+    
+          function temaInatel() {
+            document.documentElement.style.setProperty("--cor-click", "#126ae2");
+            document.documentElement.style.setProperty("--cor-sombra", "#0a599b");
+            document.documentElement.style.setProperty("--cor-text", "black");
+            document.documentElement.style.setProperty("--cor-back1", "#edf2f4");
+            document.documentElement.style.setProperty("--cor-back2", "#6a937a");
+            document.documentElement.style.setProperty("--md-sys-color-primary", "#126ae2");
+            document.documentElement.style.setProperty("--cor-bot_menu","#0a599b");
+            document.documentElement.style.setProperty("--cor-letra_menu","#0a599b");
+    
+            salvarLocalStorage("Inatel");
+          }
+    
+          function temaDark() {
+
+            const root = document.documentElement;
+
+            const cores = {
+              "--cor-click": "#ffffff",
+              "--cor-sombra": "#ffffff",
+              "--cor-text": "#000000",
+              "--cor-back1": "#000000",
+              "--cor-back2": "#000000",
+              "--md-sys-color-primary": "#000000",
+              "--cor-bot_menu": "#ffffff",
+              "--cor-letra_menu": "#ffffff"
+            };
+    
+            for (const prop in cores) {
+              root.style.setProperty(prop, cores[prop]);
+            }
+    
+            salvarLocalStorage("Dark");
+          }
+        </script>
+    </body>
+</html>

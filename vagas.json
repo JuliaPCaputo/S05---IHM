@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "logo": "./logos/Inatel.png",
+      "empresa": "Inatel",
+      "cargo": "Estagiário",
+      "cargaHoraria": 4,
+      "descricao": "Teste de Software",
+      "periodoGraduacao": 4,
+      "apresentacao": "Queremos inspirar pessoas para que descubram a tecnologia, para que conheçam a inovação e tenham a melhor experiência educacional do Brasil.",
+      "descricaoVaga": "O Inatel está recrutando estudantes com interesse em realizar estágio na área de teste de software no ICC PDI - SW. Suas competências incluem compor a equipe de QA realizando diversas atividades tais como: execução de testes de software manuais e/ou automatizados, criação de planos de teste, criação de casos de teste manuais ou automatizados, registro de bugs, dar suporte ao time de desenvolvimento visando melhoria da qualidade, criar documentações, automatizar testes utilizando linguagens e ferramentas adequadas ao projeto.",
+      "exigencias": "Estar cursando Engenharias, Sistemas de Informação ou áreas correlatas; Conhecimento em linguagens de programação; Noções de teste de software; Disponibilidade de pelo menos 20 horas semanais.",
+      "candidatura": "Enviar o currículo vitae para estagio@inatel.br com o assunto 'Estágio - Teste de Software'."
+    },
+
+    {
+      "id": 2,
+      "logo": "./logos/Inatel.png",
+      "empresa": "Inatel",
+      "cargo": "Estagiário",
+      "cargaHoraria": 4,
+      "descricao": "Desenvolvimento de Software",
+      "periodoGraduacao": 6,
+      "apresentacao": "Queremos inspirar pessoas para que descubram a tecnologia, para que conheçam a inovação e tenham a melhor experiência educacional do Brasil.",
+      "descricaoVaga": "O Inatel está recrutando estudante para estagiar em projetos de desenvolvimento de software voltados para o suporte à projetos de comunicações móveis, no Competence & Innovation Development Center - CIDC. Suas competências incluem participar do desenvolvimento do projeto de performance e análise de dados de redes de telecomunicações e realizar atividades de testes e desenvolvimento de software.",
+      "exigencias": "Estar matriculado em curso superior na área de tecnologia; Conhecimento em Python, PHP, HTML, CSS e Java Script; Disponibilidade de 40 horas semanais.",
+      "candidatura": "Enviar o currículo vitae para estagio@inatel.br com o assunto 'Estágio - Desenvolvimento de Software'."
+    },
+
+    {
+      "id": 3,
+      "logo": "./logos/Leucotron.png",
+      "empresa": "Leucotron",
+      "cargo": "Estagiário",
+      "cargaHoraria": 4,
+      "descricao": "Redes Móveis",
+      "periodoGraduacao": 6,
+      "apresentacao": "Buscamos e investimos em colaboradores que possuem experiência e competências essenciais ao negócio da empresa. Neste mesmo sentido, valorizamos colaboradores e candidatos que apresentem potencial para desenvolver-se na organização e dessa forma, as competências necessárias são plenamente divulgadas e periodicamente mensuradas de forma a reconhecer os resultados e promover o desenvolvimento dessas competências.",
+      "descricaoVaga": "A Leucotron busca estudantes para realizar estágio em projeto da área de redes móveis. Suas competências incluem suportar atividades técnicas voltadas a supervisão remota de sites.",
+      "exigencias": "Estar cursando Engenharia de Telecomunicações, Computação, Software ou áreas correlatas; Disponibilidade de 40h semanais.",
+      "candidatura": "Enviar o currículo vitae para recrutamento@leucontron.br com o assunto 'Estágio - Redes Móveis'."
+    }
+]
